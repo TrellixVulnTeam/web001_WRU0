@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <script src="../static/js/jquery-3.2.1.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
     <style>
         .head_tile {
             background-image: url("../static/images/icon.png");
@@ -45,52 +45,52 @@
     <p style="margin-left: 400px;
      margin-top: -36px;
             font-size: 16px;
-            margin-left: 1500px;
-color: #8c8c8c">已有账号?<a href="login.html">请登录</a></p>
+            margin-left: 800px;
+color: #8c8c8c">已有账号?<a href="index.html">请登录</a></p>
 </div>
 <!--注册信息表-->
 <div>
     <div style="margin-top: 80px;margin-left: 300px">
-        <form class="form-horizontal">
+        <form class="form-horizontal" action="/login/" method="POST" >
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="您的账号名和登录名"
+                    <input type="text" class="form-control" id="username" name="username" placeholder="您的账号名和登录名"
                            style="width: 400px">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputPassword3" class="col-sm-2 control-label">设置密码</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="建议至少使用两种字符组合"
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="建议至少使用两种字符组合"
                            style="width: 400px">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">确认密码</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="请再次输入密码"
+                    <input type="password" class="form-control" id="pwd" name="check_pwd" placeholder="请再次输入密码"
                            style="width: 400px">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">中国 0086</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="建议使用常用手机"
+                    <input type="number" class="form-control" id="phone" name="phone" placeholder="建议使用常用手机"
                            style="width: 400px">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">验证码</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="请输入验证码"
+                    <input type="text" class="form-control" id="check" name="check" placeholder="请输入验证码"
                            style="width: 400px">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">手机验证码</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="请输入手机验证码"
+                    <input type="number" class="form-control" id="check_number" name="check_number" placeholder="请输入手机验证码"
                            style="width: 400px">
                 </div>
             </div>
@@ -105,9 +105,9 @@ color: #8c8c8c">已有账号?<a href="login.html">请登录</a></p>
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="button" class="btn btn-primary btn-lg btn-block"
-                            style="width: 400px; position: center">立即注册
-                    </button>
+                    <input type="submit"  value="立即注册" class="btn btn-primary btn-lg btn-block"
+                            style="width: 400px; position: center" >
+                    </input>
                 </div>
             </div>
         </form>
@@ -136,20 +136,24 @@ color: #8c8c8c">已有账号?<a href="login.html">请登录</a></p>
         Copyright©2004-2016 京东JD.com 版权所有
     </div>
 </div>
-<div class="dropdown" style="padding-left: 195px">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">
-        中国 0086
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="padding-left: 195px">
-        <li><a href="#">中国</a></li>
-        <li><a href="#">美国</a></li>
-        <li><a href="#">欧洲</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">其他</a></li>
-    </ul>
-
-</div>
+<script>
+    var o = 123;
+    function test(o) {
+        var i = 0;
+        if (typeof o == "object") {
+            var j = 0;
+            for (var k = 0;k < 10;k++){
+                return console.log(k);
+            }
+            return console.log(k);
+        }
+        return console.log(j);
+    }
+    test(o)
+    setTimeout(function () {
+        //alert("欢迎注册");
+        //window.location = "http://www.jd.com"
+    },2000)
+</script>
 </body>
 </html>
