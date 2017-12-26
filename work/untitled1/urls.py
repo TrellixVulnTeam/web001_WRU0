@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^db/',include('cmdb.urls')),
     url(r'^login/$',views.login),
     url(r'^$',views.login),
-    url(r'^Dashboard/$',views.index),
+    url(r'^Dashboard/',views.index),
     url(r'.*', views.login),
 ]
