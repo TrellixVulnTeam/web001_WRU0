@@ -1,1 +1,3 @@
-__author__ = "Alex Li"
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+__author__="Alan"
